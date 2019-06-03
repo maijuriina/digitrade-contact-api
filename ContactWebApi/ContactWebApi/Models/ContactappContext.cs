@@ -36,17 +36,17 @@ namespace ContactWebApi.Models
 
                 entity.Property(e => e.City).IsUnicode(false);
 
-                entity.Property(e => e.Email).IsUnicode(false);
+                entity.Property(e => e.EmailAddress).IsUnicode(false);
 
                 entity.Property(e => e.FirstName).IsUnicode(false);
 
                 entity.Property(e => e.LastName).IsUnicode(false);
 
-                entity.Property(e => e.Phone).IsUnicode(false);
+                entity.Property(e => e.PhoneNumber).IsUnicode(false);
 
                 entity.Property(e => e.PostalCode).IsUnicode(false);
 
-                entity.Property(e => e.Street).IsUnicode(false);
+                entity.Property(e => e.StreetAddress).IsUnicode(false);
             });
 
             OnModelCreatingPartial(modelBuilder);
