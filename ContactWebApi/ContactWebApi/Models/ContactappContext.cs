@@ -32,8 +32,6 @@ namespace ContactWebApi.Models
 
             modelBuilder.Entity<Contact>(entity =>
             {
-                entity.Property(e => e.Id).ValueGeneratedNever();
-
                 entity.Property(e => e.City).IsUnicode(false);
 
                 entity.Property(e => e.EmailAddress).IsUnicode(false);
