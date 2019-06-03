@@ -5,14 +5,14 @@ using System.Threading.Tasks;
 using ContactWebApi.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace ContactWebApi.Repositories
+namespace ContactWebApi.Services
 {
-    public interface IContactRepository
+    public interface IContactService
     {
         Contact Create(Contact contact);
         List<Contact> Read();
         Contact Read(long id);
-        Contact Update(Contact contact);
+        Contact Update(long id, Contact contact);
         StatusCodeResult Delete(long id);
     }
 }

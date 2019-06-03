@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Mvc;
 
 namespace ContactWebApi.Repositories
 {
@@ -23,12 +24,12 @@ namespace ContactWebApi.Repositories
             return contact;
         }
 
-        public void Delete(int id)
+        public StatusCodeResult Delete(long id)
         {
-            var deleteContact = Read(id);
-            _context.Remove(deleteContact);
+            var deletedContact = Read(id);
+            _context.Remove(deletedContact);
             _context.SaveChanges();
-            return;
+            return new OkResult();
         }
 
         public List<Contact> Read()
@@ -38,7 +39,7 @@ namespace ContactWebApi.Repositories
                 .ToList();
         }
 
-        public Contact Read(int id)
+        public Contact Read(long id)
         {
             return _context.Contact.FirstOrDefault(c => c.Id == id);
         }
