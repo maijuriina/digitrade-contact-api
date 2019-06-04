@@ -27,7 +27,7 @@ namespace ContactWebApi.Services
         {
             var deletedContact = _contactRepository.Read(id);
             if (deletedContact == null)
-                throw new Exception("Contact not found!");
+                return new NotFoundResult();
             return _contactRepository.Delete(id);
         }
 
