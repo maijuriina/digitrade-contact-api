@@ -13,11 +13,11 @@ namespace ContactWebApi.Models
         [StringLength(50)]
         public string LastName { get; set; }
         [StringLength(50)]
-        public string PhoneNumber { get; set; }
+        public string Phone { get; set; }
         [StringLength(50)]
-        public string EmailAddress { get; set; }
+        public string Email { get; set; }
         [StringLength(50)]
-        public string StreetAddress { get; set; }
+        public string Street { get; set; }
         [StringLength(50)]
         public string PostalCode { get; set; }
         [StringLength(50)]

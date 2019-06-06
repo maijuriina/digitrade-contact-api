@@ -71,6 +71,7 @@ namespace ContactWebApi
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
+            app.UseCors("ContactsAppPolicy");
 
             app.UseMvc();
         }
